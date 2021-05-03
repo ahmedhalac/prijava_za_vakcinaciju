@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.prijavazavakcinaciju.databinding.FragmentUserDataBinding
 
 
@@ -18,8 +19,20 @@ class UserDataFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentUserDataBinding>(inflater, R.layout.fragment_user_data, container, false)
 
-        binding.userDataBtn.setOnClickListener{
-            Toast.makeText(activity, "ok", Toast.LENGTH_SHORT).show()
+        binding.userDataBtn.setOnClickListener{ view: View ->
+            val firstName = binding.ime.text.toString()
+            val lastName = binding.prezime.text.toString()
+            val ages = binding.godine.text.toString()
+            val phone = binding.telefon.text.toString()
+            val email = binding.email.text.toString()
+
+            // Validation
+            if(firstName == "" || lastName == "" || ages == "" || phone == "" || email == "") {
+                Toast.makeText(activity, "Popunite sva polja!", Toast.LENGTH_SHORT).show()
+            }else {
+                view.findNavController().navigate(R.id.action_userDataFragment_to_priorityFragment)
+            }
+
         }
 
         return binding.root

@@ -42,11 +42,20 @@
         android:name="com.example.prijavazavakcinaciju.UserDataFragment"
         android:label="UserDataFragment"
         tools:layout="@layout/fragment_user_data"
-        />
+        >
+        <action
+            android:id="@+id/action_userDataFragment_to_priorityFragment"
+            app:destination="@id/priorityFragment" />
+    </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.prijavazavakcinaciju.AboutFragment"
         android:label="AboutFragment"
         tools:layout="@layout/fragment_about"
         />
+    <fragment
+        android:id="@+id/priorityFragment"
+        android:name="com.example.prijavazavakcinaciju.PriorityFragment"
+        android:label="fragment_priority"
+        tools:layout="@layout/fragment_priority" />
 </navigation>
