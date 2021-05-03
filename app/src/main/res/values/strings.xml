@@ -5,4 +5,6 @@
     <string name="start">Pokreni</string>
     <string name="canceled">Žao nam je. Vi posjedujete prepreku za primanje vakcine.</string>
     <string name="next">Dalje</string>
+    <string name="about">About</string>
+    <string name="about_text">This app allows easy registration for immunization againist COVID-19 virus.</string>
 </resources>

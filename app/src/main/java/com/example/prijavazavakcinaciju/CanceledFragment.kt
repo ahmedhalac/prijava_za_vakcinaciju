@@ -20,8 +20,9 @@ class CanceledFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentCanceledBinding>(inflater, R.layout.fragment_canceled, container, false)
 
-
-
+        binding.canceledBtn.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_canceledFragment_to_titleFragment)
+        }
         return binding.root
     }
 
