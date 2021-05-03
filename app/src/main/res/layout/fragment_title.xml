@@ -22,14 +22,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleImage"
-            tools:layout_editor_absoluteX="117dp"
-            tools:layout_editor_absoluteY="126dp" />
+            app:layout_constraintTop_toBottomOf="@+id/titleImage" />
 
         <ImageView
             android:id="@+id/titleImage"
             android:layout_width="0dp"
-            android:layout_height="320dp"
+            android:layout_height="250dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:scaleType="fitCenter"
