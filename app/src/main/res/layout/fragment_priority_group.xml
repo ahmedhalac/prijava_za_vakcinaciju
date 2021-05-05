@@ -3,14 +3,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.navigation.InGame">
-
-    <data>
-
-        <variable
-            name="obstacle"
-            type="com.example.prijavazavakcinaciju.ObstacleFragment" />
-    </data>
+    tools:context="com.example.android.navigation.PriorityGroupFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -86,7 +79,7 @@
             </RadioGroup>
 
             <Button
-                android:id="@+id/submitButton"
+                android:id="@+id/priority_group_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"

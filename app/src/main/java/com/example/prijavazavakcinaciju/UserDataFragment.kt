@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.prijavazavakcinaciju.databinding.FragmentUserDataBinding
@@ -26,12 +25,14 @@ class UserDataFragment : Fragment() {
             val phone = binding.telefon.text.toString()
             val email = binding.email.text.toString()
 
+
+            view.findNavController().navigate(R.id.action_userDataFragment_to_priorityGroupFragment)
             // Validation
-            if(firstName == "" || lastName == "" || ages == "" || phone == "" || email == "") {
+            /*if(firstName == "" || lastName == "" || ages == "" || phone == "" || email == "") {
                 Toast.makeText(activity, "Popunite sva polja!", Toast.LENGTH_SHORT).show()
             }else {
                 view.findNavController().navigate(R.id.action_userDataFragment_to_priorityFragment)
-            }
+            }*/
 
         }
 
