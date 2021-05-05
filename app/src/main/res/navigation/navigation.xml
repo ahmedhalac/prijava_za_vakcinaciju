@@ -62,10 +62,38 @@
         <action
             android:id="@+id/action_priorityGroupFragment_to_vaccinesFragment2"
             app:destination="@id/vaccinesFragment2" />
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <argument
+            android:name="lastName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/vaccinesFragment2"
         android:name="com.example.prijavazavakcinaciju.VaccinesFragment"
         android:label="VaccinesFragment"
-        tools:layout="@layout/fragment_vaccines"/>
+        tools:layout="@layout/fragment_vaccines">
+        <action
+            android:id="@+id/action_vaccinesFragment2_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <argument
+            android:name="lastName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.prijavazavakcinaciju.SummaryFragment"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary" >
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <argument
+            android:name="lastName"
+            app:argType="string" />
+    </fragment>
 </navigation>

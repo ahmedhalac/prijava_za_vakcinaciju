@@ -64,10 +64,13 @@ class ObstacleFragment : Fragment() {
                 // The first answer in the original question is always the correct one, so if our
                 // answer matches, we have the correct answer.
                 if (answers[answerIndex] == currentQuestion.answers[0]) {
-                    view.findNavController().navigate(R.id.action_obstacleFragment_to_userDataFragment)
+                    // GO FORWARD
+                    //view.findNavController().navigate(R.id.action_obstacleFragment_to_userDataFragment)
+                    view.findNavController().navigate(ObstacleFragmentDirections.actionObstacleFragmentToUserDataFragment())
                 } else {
-                    //Neuspjela prijava
-                    view.findNavController().navigate(R.id.action_obstacleFragment_to_canceledFragment)
+                    // GO BACK
+                    //view.findNavController().navigate(R.id.action_obstacleFragment_to_canceledFragment)
+                    view.findNavController().navigate(ObstacleFragmentDirections.actionObstacleFragmentToCanceledFragment())
                 }
             }
         }
