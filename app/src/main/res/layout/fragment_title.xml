@@ -10,6 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/id_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prijava_za_vakcinaciju"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/titleImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/nextButton"
             android:layout_width="wrap_content"
@@ -35,7 +49,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_main_title"
             app:srcCompat="@drawable/ic_title_logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
