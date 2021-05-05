@@ -2,4 +2,5 @@
 <resources>
     <dimen name="button_text">16sp</dimen>
     <dimen name="title">25sp</dimen>
+    <dimen name="summary_text_size">22sp</dimen>
 </resources>

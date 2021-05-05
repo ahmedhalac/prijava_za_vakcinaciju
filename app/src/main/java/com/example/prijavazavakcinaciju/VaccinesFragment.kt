@@ -25,8 +25,33 @@ class VaccinesFragment : Fragment() {
 
         val args = VaccinesFragmentArgs.fromBundle(requireArguments())
 
+        var vaccine = ""
+
+        binding.vaccineRadioGroup.setOnCheckedChangeListener { group, checkedId ->
+            if (checkedId == binding.idVaccinesRadio1.id) {
+                vaccine = binding.idVaccinesRadio1.text.toString()
+            } else if (checkedId == binding.idVaccinesRadio2.id) {
+                vaccine = binding.idVaccinesRadio2.text.toString()
+            } else if (checkedId == binding.idVaccinesRadio3.id) {
+                vaccine = binding.idVaccinesRadio3.text.toString()
+            } else {
+                vaccine = binding.idVaccinesRadio3.text.toString()
+            }
+        }
+
+
         binding.vaccinesBtn.setOnClickListener { view: View ->
-            view.findNavController().navigate(VaccinesFragmentDirections.actionVaccinesFragment2ToSummaryFragment(args.firstName, args.lastName))
+            view.findNavController().navigate(
+                VaccinesFragmentDirections.actionVaccinesFragment2ToSummaryFragment(
+                    args.firstName,
+                    args.lastName,
+                    args.age,
+                    args.phone,
+                    args.email,
+                    args.priority,
+                    vaccine
+                )
+            )
         }
 
 

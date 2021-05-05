@@ -59,7 +59,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:hint="Prezime"
-            android:drawableStart="@drawable/ic_person"
+            android:drawableStart="@drawable/ic_last_name"
             android:drawablePadding="12dp"
             android:textColor="#120B0B"
             android:textColorHint="#C8BABA"
