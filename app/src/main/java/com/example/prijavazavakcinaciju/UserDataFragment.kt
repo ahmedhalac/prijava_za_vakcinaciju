@@ -26,7 +26,7 @@ class UserDataFragment : Fragment() {
             val email = binding.email.text.toString()
 
 
-            view.findNavController().navigate(UserDataFragmentDirections.actionUserDataFragmentToPriorityGroupFragment(firstName, lastName))
+            view.findNavController().navigate(UserDataFragmentDirections.actionUserDataFragmentToPriorityGroupFragment(firstName, lastName, ages, phone, email))
             // Validation
             /*if(firstName == "" || lastName == "" || ages == "" || phone == "" || email == "") {
                 Toast.makeText(activity, "Popunite sva polja!", Toast.LENGTH_SHORT).show()

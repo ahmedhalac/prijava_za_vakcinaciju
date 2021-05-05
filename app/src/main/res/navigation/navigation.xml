@@ -68,6 +68,15 @@
         <argument
             android:name="lastName"
             app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/vaccinesFragment2"
@@ -83,6 +92,18 @@
         <argument
             android:name="lastName"
             app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="priority"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/summaryFragment"
@@ -94,6 +115,21 @@
             app:argType="string" />
         <argument
             android:name="lastName"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="priority"
+            app:argType="string" />
+        <argument
+            android:name="vaccine"
             app:argType="string" />
     </fragment>
 </navigation>

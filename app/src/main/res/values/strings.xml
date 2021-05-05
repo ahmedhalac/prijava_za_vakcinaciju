@@ -9,4 +9,7 @@
     <string name="about_text">This app allows easy registration for immunization againist COVID-19 virus.</string>
     <string name="priority_title">Pripadanje prioritetnoj grupi</string>
     <string name="vaccine_selection">Izbor vakcine</string>
+    <string name="share_text">Uspješna prijava za vakcinaciju. Osoba %1$s %2$s %3$s. godine, telefon: %4$s, email: %5$s, prioritet: %6$s, izbor vakcine: %7$s . </string>
+    <string name="share">Share</string>
+    <string name="first_last_name_text">%1$s %2$s</string>
 </resources>

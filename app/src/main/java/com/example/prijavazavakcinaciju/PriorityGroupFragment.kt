@@ -9,25 +9,53 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.prijavazavakcinaciju.databinding.FragmentPriorityGroupBinding
 
+
 class PriorityGroupFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = DataBindingUtil.inflate<FragmentPriorityGroupBinding>(inflater, R.layout.fragment_priority_group, container, false)
-
+        val binding = DataBindingUtil.inflate<FragmentPriorityGroupBinding>(
+            inflater,
+            R.layout.fragment_priority_group,
+            container,
+            false
+        )
 
         val args = PriorityGroupFragmentArgs.fromBundle(requireArguments())
 
-        binding.priorityGroupBtn.setOnClickListener{ view: View ->
-            view.findNavController().navigate(PriorityGroupFragmentDirections.actionPriorityGroupFragmentToVaccinesFragment2(args.firstName, args.lastName))
+        var priority = ""
+
+        binding.radioGroupPriority.setOnCheckedChangeListener{group, checkedId ->
+            if(checkedId == binding.answer1.id) {
+                priority = "Prioritetna grupa (" + binding.answer1.text.toString() + ")"
+            }else if(checkedId == binding.answer2.id) {
+                priority = "Prioritetna grupa (" + binding.answer2.text.toString() + ")"
+            }
+            else if(checkedId == binding.answer3.id) {
+                priority = "Prioritetna grupa (" + binding.answer3.text.toString() + ")"
+            }else {
+                priority = "Nije u prioritetnoj grupi"
+            }
         }
 
 
-
+        binding.priorityGroupBtn.setOnClickListener { view: View ->
+            view.findNavController().navigate(
+                PriorityGroupFragmentDirections.actionPriorityGroupFragmentToVaccinesFragment2(
+                    args.firstName,
+                    args.lastName,
+                    args.age,
+                    args.phone,
+                    args.email,
+                    priority
+                )
+            )
+        }
 
         return binding.root
     }
+
 
 }
