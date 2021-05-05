@@ -58,5 +58,14 @@
         android:name="com.example.prijavazavakcinaciju.PriorityGroupFragment"
         android:label="PriorityGroupFragment"
         tools:layout="@layout/fragment_priority_group"
-        />
+        >
+        <action
+            android:id="@+id/action_priorityGroupFragment_to_vaccinesFragment2"
+            app:destination="@id/vaccinesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/vaccinesFragment2"
+        android:name="com.example.prijavazavakcinaciju.VaccinesFragment"
+        android:label="VaccinesFragment"
+        tools:layout="@layout/fragment_vaccines"/>
 </navigation>
