@@ -25,7 +25,8 @@ class PriorityGroupFragment : Fragment() {
 
         val args = PriorityGroupFragmentArgs.fromBundle(requireArguments())
 
-        var priority = ""
+        //na pocetku postavljeno na prvi odgovor ako se ne klikne nista
+        var priority = "Prioritetna grupa (" + binding.answer1.text.toString() + ")"
 
         binding.radioGroupPriority.setOnCheckedChangeListener{group, checkedId ->
             if(checkedId == binding.answer1.id) {

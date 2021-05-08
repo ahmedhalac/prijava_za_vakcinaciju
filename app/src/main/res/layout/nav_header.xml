@@ -36,6 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_canceled_img" />
+        app:srcCompat="@drawable/ic_canceled_img"
+        android:contentDescription="@string/nav_img" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

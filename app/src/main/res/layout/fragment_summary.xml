@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:fontFamily="sans-serif"
-            android:text="Podaci o osobi"
+            android:text="@string/podaci_o_osobi"
             android:textSize="@dimen/title"
             android:textStyle="bold"
             android:typeface="normal"
@@ -131,6 +131,20 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_priority"
             app:layout_constraintVertical_bias="0"
             tools:text="Vaccine" />
+
+        <Button
+            android:id="@+id/term_location_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/termin_lokacija"
+            android:textSize="@dimen/button_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vaccine" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

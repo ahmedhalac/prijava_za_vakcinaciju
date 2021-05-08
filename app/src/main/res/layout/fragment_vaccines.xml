@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:fontFamily="sans-serif"
-                android:text="Izbor vakcine"
+                android:text="@string/izbor_vakcine"
                 android:textSize="@dimen/title"
                 android:textStyle="bold"
                 android:typeface="normal"
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:checked="true"
-                    android:text="AstraZeneca"
+                    android:text="@string/astrazeneca"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -57,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Moderna"
+                    android:text="@string/moderna"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Pfizer-BioNTech"
+                    android:text="@string/pfizer_biontech"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -73,7 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Sputnik V"
+                    android:text="@string/sputnik_v"
                     android:textSize="18sp" />
 
             </RadioGroup>
