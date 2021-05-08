@@ -6,6 +6,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.prijavazavakcinaciju.databinding.FragmentSummaryBinding
 import com.example.prijavazavakcinaciju.databinding.FragmentUserDataBinding
 
@@ -31,6 +32,10 @@ class SummaryFragment : Fragment() {
         binding.tvEmail.text = args.email
         binding.tvPriority.text = args.priority
         binding.tvVaccine.text = args.vaccine
+
+        binding.termLocationBtn.setOnClickListener{view: View ->
+            view.findNavController().navigate(R.id.action_summaryFragment_to_appointmentFragment)
+        }
 
         setHasOptionsMenu(true)
         return binding.root

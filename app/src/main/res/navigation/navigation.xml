@@ -131,5 +131,13 @@
         <argument
             android:name="vaccine"
             app:argType="string" />
+        <action
+            android:id="@+id/action_summaryFragment_to_appointmentFragment"
+            app:destination="@id/appointmentFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.example.prijavazavakcinaciju.AppointmentFragment"
+        android:label="AppointmentFragment"
+        tools:layout="@layout/fragment_appointment"/>
 </navigation>

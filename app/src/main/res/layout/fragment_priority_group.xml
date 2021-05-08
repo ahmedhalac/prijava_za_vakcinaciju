@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:checked="true"
-                    android:text="Hronični bolesnik"
+                    android:text="@string/hroni_ni_bolesnik"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -57,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Medicinski radnik"
+                    android:text="@string/medicinski_radnik"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Korisnik/radnik staračkog doma"
+                    android:text="@string/korisnik_radnik_stara_kog_doma"
                     android:textSize="18sp" />
 
                 <RadioButton
@@ -73,7 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="Ne pripadam"
+                    android:text="@string/ne_pripadam"
                     android:textSize="18sp" />
 
             </RadioGroup>

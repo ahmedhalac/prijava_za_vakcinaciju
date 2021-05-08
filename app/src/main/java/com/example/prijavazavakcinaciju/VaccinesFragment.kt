@@ -25,10 +25,11 @@ class VaccinesFragment : Fragment() {
 
         val args = VaccinesFragmentArgs.fromBundle(requireArguments())
 
-        var vaccine = ""
+        //na pocetku postavljeno na prvi odgovor ako se ne klikne nista
+        var vaccine = binding.idVaccinesRadio1.text.toString()
 
         binding.vaccineRadioGroup.setOnCheckedChangeListener { group, checkedId ->
-            if (checkedId == binding.idVaccinesRadio1.id) {
+            if (checkedId == binding.idVaccinesRadio1.id || checkedId == -1) {
                 vaccine = binding.idVaccinesRadio1.text.toString()
             } else if (checkedId == binding.idVaccinesRadio2.id) {
                 vaccine = binding.idVaccinesRadio2.text.toString()
