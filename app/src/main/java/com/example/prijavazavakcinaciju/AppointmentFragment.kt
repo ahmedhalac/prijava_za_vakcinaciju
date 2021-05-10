@@ -50,7 +50,7 @@ class AppointmentFragment : Fragment() {
         vaccineAppTimer = VaccineAppTimer(this.lifecycle)
 
         if(savedInstanceState != null) {
-            vaccineAppTimer.registrationNumCount = savedInstanceState.getInt(KEY_REGISTERED_NUM, 53000)
+            registered = savedInstanceState.getInt(KEY_REGISTERED_NUM, 35200)
         }
         
 
@@ -127,7 +127,7 @@ class AppointmentFragment : Fragment() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Timber.i("onSaveInstanceCalled")
-        outState.putInt(KEY_REGISTERED_NUM, vaccineAppTimer.registrationNumCount)
+        outState.putInt(KEY_REGISTERED_NUM, registered)
     }
 
     // Called when the fragment's view is no longer needed, to clean up the resources associated with that view.
