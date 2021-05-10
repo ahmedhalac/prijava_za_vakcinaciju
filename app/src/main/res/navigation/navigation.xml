@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.prijavazavakcinaciju.TitleFragment"
+        android:label="TitleFragment"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_obstacleFragment"
+            app:destination="@id/obstacleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/obstacleFragment"
+        android:name="com.example.prijavazavakcinaciju.ObstacleFragment"
+        android:label="ObstacleFragment"
+        tools:layout="@layout/fragment_obstacle" >
+        <action
+            android:id="@+id/action_obstacleFragment_to_canceledFragment"
+            app:destination="@id/canceledFragment"
+            app:popUpTo="@id/obstacleFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_obstacleFragment_to_userDataFragment"
+            app:destination="@id/userDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/canceledFragment"
+        android:name="com.example.prijavazavakcinaciju.CanceledFragment"
+        android:label="CanceledFragment"
+        tools:layout="@layout/fragment_canceled" >
+        <action
+            android:id="@+id/action_canceledFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDataFragment"
+        android:name="com.example.prijavazavakcinaciju.UserDataFragment"
+        android:label="UserDataFragment"
+        tools:layout="@layout/fragment_user_data"
+        >
+        <action
+            android:id="@+id/action_userDataFragment_to_priorityGroupFragment"
+            app:destination="@id/priorityGroupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.prijavazavakcinaciju.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about"
+        />
+    <fragment
+        android:id="@+id/priorityGroupFragment"
+        android:name="com.example.prijavazavakcinaciju.PriorityGroupFragment"
+        android:label="PriorityGroupFragment"
+        tools:layout="@layout/fragment_priority_group"
+        >
+        <action
+            android:id="@+id/action_priorityGroupFragment_to_vaccinesFragment2"
+            app:destination="@id/vaccinesFragment2" />
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <argument
+            android:name="lastName"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/vaccinesFragment2"
+        android:name="com.example.prijavazavakcinaciju.VaccinesFragment"
+        android:label="VaccinesFragment"
+        tools:layout="@layout/fragment_vaccines">
+        <action
+            android:id="@+id/action_vaccinesFragment2_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <argument
+            android:name="lastName"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="priority"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.prijavazavakcinaciju.SummaryFragment"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary" >
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <argument
+            android:name="lastName"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="priority"
+            app:argType="string" />
+        <argument
+            android:name="vaccine"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_summaryFragment_to_appointmentFragment"
+            app:destination="@id/appointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.example.prijavazavakcinaciju.AppointmentFragment"
+        android:label="AppointmentFragment"
+        tools:layout="@layout/fragment_appointment">
+        <argument
+            android:name="priority"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.UserDataFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:hint="@string/ime"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="12dp"
+            android:inputType="text"
+            android:shadowColor="#3C3F41"
+            android:textColor="#3C3F41"
+            android:textColorHint="#C8BABA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:hint="@string/email"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="12dp"
+            android:inputType="textEmailAddress"
+            android:textColor="#120B0B"
+            android:textColorHint="#C8BABA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telefon" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/prezime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:hint="@string/prezime"
+            android:drawableStart="@drawable/ic_last_name"
+            android:drawablePadding="12dp"
+            android:textColor="#120B0B"
+            android:textColorHint="#C8BABA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ime" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/godine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:hint="@string/godine"
+            android:drawablePadding="12dp"
+            android:drawableStart="@drawable/ic_age"
+            android:inputType="number"
+            android:textColor="#120B0B"
+            android:textColorHint="#C8BABA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prezime" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/telefon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:hint="@string/telefon"
+            android:drawablePadding="12dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:inputType="phone"
+            android:textColor="#120B0B"
+            android:textColorHint="#C8BABA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/godine" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
+            android:gravity="center"
+            android:text="@string/podaci_o_korisniku"
+            android:textSize="@dimen/title"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/user_data_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:textSize="@dimen/button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
