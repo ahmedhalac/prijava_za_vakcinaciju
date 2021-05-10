@@ -23,8 +23,8 @@ class ObstacleFragment : Fragment() {
     //Prvi odgovor je jedini ispravan za nastavak kroz prijavu
     private val questions: MutableList<Question> = mutableListOf(
         Question(
-            text = "Da li postoje prepreke za primanje vakcine?",
-            answers = listOf("Nemam prepreka za vakcinaciju", "Trenutno bolujem od Covid-19", "Trudnoća")
+            text = "Da li posjedujete prepreke za primanje vakcine?",
+            answers = listOf("Nemam prepreka za vakcinaciju", "Trenutno bolujem od COVID-19", "Trudnoća")
         )
     )
 
