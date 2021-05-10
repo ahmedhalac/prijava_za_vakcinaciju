@@ -3,13 +3,14 @@ package com.example.prijavazavakcinaciju
 import android.os.Handler
 import android.os.Looper
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import timber.log.Timber
 
-class VaccineAppTimer {
+class VaccineAppTimer(lifecycle: Lifecycle) : LifecycleObserver {
 
-    // The number of seconds counted since the timer started
-    var secondsCount = 0
+    // Početna simulacija broja registrovanih korisnika
+    var registrationNumCount = 53000
 
     /**
      * [Handler] is a class meant to process a queue of messages (known as [android.os.Message]s)
@@ -18,13 +19,18 @@ class VaccineAppTimer {
     private var handler = Handler(Looper.getMainLooper())
     private lateinit var runnable: Runnable
 
+    // connection between fragment and observer(timer)
+    init {
+        lifecycle.addObserver(this)
+    }
+
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun startTimer() {
         // Create the runnable action, which prints out a log and increments the seconds counter
         runnable = Runnable {
-            secondsCount++
-            Timber.i("Timer is at : $secondsCount")
+            registrationNumCount++
+            Timber.i("Timer is at : $registrationNumCount")
             // postDelayed re-adds the action to the queue of actions the Handler is cycling
             // through. The delayMillis param tells the handler to run the runnable in
             // 1 second (1000ms)

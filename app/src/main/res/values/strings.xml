@@ -32,9 +32,10 @@
     <string name="sputnik_v">Sputnik V</string>
     <string name="nav_img">nav_img</string>
     <string name="corona_img">corona_img</string>
-    <string name="home">Home</string>
-    <string name="termin_lokacija">Termin/lokacija</string>
+    <string name="home">go back</string>
+    <string name="termin_lokacija">Termin vakcinacije</string>
     <string name="dom_zdravlja_stari_grad">Dom zdravlja Stari Grad</string>
     <string name="alajbegovi_a_1_sarajevo_71000">Alajbegovića 1, Sarajevo 71000</string>
     <string name="_22_5_2021">22.5.2021, 11:30h</string>
+    <string name="num_registered">%1$d registrovanih</string>
 </resources>

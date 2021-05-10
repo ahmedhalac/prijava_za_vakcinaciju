@@ -4,11 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.prijavazavakcinaciju.databinding.FragmentSummaryBinding
-import com.example.prijavazavakcinaciju.databinding.FragmentUserDataBinding
 
 class SummaryFragment : Fragment() {
     override fun onCreateView(
@@ -25,6 +23,7 @@ class SummaryFragment : Fragment() {
             false
         )
 
+
         binding.tvFirstLastName.text =
             getString(R.string.first_last_name_text, args.firstName, args.lastName)
         binding.tvAge.text = args.age
@@ -33,8 +32,8 @@ class SummaryFragment : Fragment() {
         binding.tvPriority.text = args.priority
         binding.tvVaccine.text = args.vaccine
 
-        binding.termLocationBtn.setOnClickListener{view: View ->
-            view.findNavController().navigate(R.id.action_summaryFragment_to_appointmentFragment)
+        binding.termLocationBtn.setOnClickListener { view: View ->
+            view.findNavController().navigate(SummaryFragmentDirections.actionSummaryFragmentToAppointmentFragment(args.priority))
         }
 
         setHasOptionsMenu(true)

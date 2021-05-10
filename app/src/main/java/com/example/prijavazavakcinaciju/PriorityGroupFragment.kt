@@ -28,7 +28,7 @@ class PriorityGroupFragment : Fragment() {
         //na pocetku postavljeno na prvi odgovor ako se ne klikne nista
         var priority = "Prioritetna grupa (" + binding.answer1.text.toString() + ")"
 
-        binding.radioGroupPriority.setOnCheckedChangeListener{group, checkedId ->
+        binding.radioGroupPriority.setOnCheckedChangeListener{ _, checkedId ->
             if(checkedId == binding.answer1.id) {
                 priority = "Prioritetna grupa (" + binding.answer1.text.toString() + ")"
             }else if(checkedId == binding.answer2.id) {
